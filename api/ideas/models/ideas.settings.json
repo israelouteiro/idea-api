@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ideas",
+  "info": {
+    "name": "Ideas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "ideia": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "ideas"
+    },
+    "votes": {
+      "via": "idea",
+      "collection": "votes"
+    }
+  }
+}

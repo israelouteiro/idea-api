@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "votes",
+  "info": {
+    "name": "Votes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "up": {
+      "type": "boolean"
+    },
+    "down": {
+      "type": "boolean"
+    },
+    "idea": {
+      "model": "ideas",
+      "via": "votes"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "votes"
+    }
+  }
+}
